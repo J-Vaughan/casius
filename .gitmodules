@@ -1,0 +1,3 @@
+[submodule "providence"]
+	path = providence
+	url = https://github.com/collectiveaccess/providence.git

@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+  web:
+    image: casius:latest
+    depends_on:
+      - db
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html

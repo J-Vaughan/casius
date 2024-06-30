@@ -7,6 +7,8 @@ services:
       MYSQL_DATABASE: test
       MYSQL_USER: test
       MYSQL_PASSWORD: test
+    volumes:
+      - ./db:/var/lib/mysql
   web:
     image: casius:latest
     depends_on:
